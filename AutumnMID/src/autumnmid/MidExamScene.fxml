@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="autumnmid.MidExamSceneController">
+    <TextField fx:id="idTextField" layoutX="149.0" layoutY="51.0" AnchorPane.leftAnchor="149.0"/>
+    <TextField fx:id="nameTextField" layoutX="149.0" layoutY="95.0" AnchorPane.leftAnchor="149.0"/>
+    <TextField fx:id="salaryTextField" layoutX="149.0" layoutY="139.0" AnchorPane.leftAnchor="149.0"/>
+    <RadioButton fx:id="maleRadioButton" layoutX="149.0" layoutY="197.0" mnemonicParsing="false" text="Male"
+                 AnchorPane.leftAnchor="149.0"/>
+    <RadioButton fx:id="femaleRadioButton" layoutX="230.0" layoutY="197.0" mnemonicParsing="false" text="Female"/>
+    <Text layoutX="41.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID?"/>
+    <Text layoutX="41.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name?"/>
+    <Text layoutX="39.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Salary?"/>
+    <Text layoutX="41.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender?"
+          AnchorPane.leftAnchor="41.0"/>
+    <Text layoutX="376.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Designation?"/>
+    <Text layoutX="376.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deparmen?t"/>
+    <Text layoutX="374.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date of Birth?"/>
+    <Text layoutX="376.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date of Join?"/>
+    <ComboBox fx:id="desigComboBox" layoutX="501.0" layoutY="51.0" prefWidth="150.0"/>
+    <ComboBox fx:id="deptComboBox" layoutX="501.0" layoutY="104.0" prefWidth="150.0"/>
+    <DatePicker fx:id="dobDatePicker" layoutX="501.0" layoutY="148.0" prefHeight="28.0" prefWidth="150.0"/>
+    <DatePicker fx:id="dojDatePicker" layoutX="501.0" layoutY="192.0" prefHeight="28.0" prefWidth="150.0"/>
+    <Button layoutX="691.0" layoutY="51.0" mnemonicParsing="false"
+            onAction="#addNewEmpToListAndShowThemAllButtonOnClick" prefHeight="170.0" prefWidth="141.0"
+            text="Add new Employee to ArrayList and show all of them in TableView" textAlignment="CENTER"
+            wrapText="true"/>
+    <Text fx:id="countLabel" layoutX="38.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0"
+          text="After addition, there are  total 0 employees, as show below:"/>
+    <Button layoutX="37.0" layoutY="519.0" mnemonicParsing="false" onAction="#onSwitchFilterScene" prefHeight="48.0"
+            prefWidth="795.0" text="SWITCH TO THE FILTERING SCENE"/>
+    <TableView fx:id="employeeTable" layoutX="37.0" layoutY="288.0" prefHeight="200.0" prefWidth="795.0">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="75.0" text="ID"/>
+            <TableColumn fx:id="nameColumn" prefWidth="99.0" text="NAME"/>
+            <TableColumn fx:id="salaryColumn" prefWidth="90.0" text="SALARY"/>
+            <TableColumn fx:id="genderColumn" minWidth="4.0" prefWidth="70.0" text="GENDER"/>
+            <TableColumn fx:id="designationColumn" minWidth="0.0" prefWidth="107.0" text="DESIGNATION"/>
+            <TableColumn fx:id="departmentColumn" minWidth="0.0" prefWidth="103.0" text="DEPARTMENT"/>
+            <TableColumn fx:id="dobColumn" minWidth="0.0" prefWidth="122.0" text="DATE OF BIRTH"/>
+            <TableColumn fx:id="dojColumn" minWidth="0.0" prefWidth="128.0" text="DATE OF JOINIG"/>
+        </columns>
+    </TableView>
+</AnchorPane>
